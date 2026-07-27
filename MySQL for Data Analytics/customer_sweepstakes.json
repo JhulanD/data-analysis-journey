@@ -1,0 +1,134 @@
+﻿[
+    {
+        "sweepstake_id": "1",
+        "customer_id": "100101",
+        "phone": "635-573-9754",
+        "birth_date": "4/28/1989",
+        "address": "\"1229 Main Street, Scranton, PA\"",
+        "total_money_spent": "11000",
+        "income": "100000",
+        "Are you over 18?": "Yes",
+        "favorite_color": "Blue"
+    },
+    {
+        "sweepstake_id": "2",
+        "customer_id": "100101",
+        "phone": "635-573-9754",
+        "birth_date": "4/28/1989",
+        "address": "\"1229 Main Street, Scranton, PA\"",
+        "total_money_spent": "11000",
+        "income": "100000",
+        "Are you over 18?": "Yes",
+        "favorite_color": "Blue"
+    },
+    {
+        "sweepstake_id": "3",
+        "customer_id": "100102",
+        "phone": "7292879456",
+        "birth_date": "4/11/1965",
+        "address": "\"123 North Hill Drive, Dallas, TX\"",
+        "total_money_spent": "947",
+        "income": "75000",
+        "Are you over 18?": "Y",
+        "favorite_color": "Purple"
+    },
+    {
+        "sweepstake_id": "4",
+        "customer_id": "100103",
+        "phone": "126-583-7856",
+        "birth_date": "2/7/1999",
+        "address": "\"432 Hilly Road, Austin, Tx\"",
+        "total_money_spent": "534",
+        "income": "60000",
+        "Are you over 18?": "No",
+        "favorite_color": "Green"
+    },
+    {
+        "sweepstake_id": "5",
+        "customer_id": "100104",
+        "phone": "(975)357-7663",
+        "birth_date": "4/22/1921",
+        "address": "\"101 Alpine Avenue, New York, NY\"",
+        "total_money_spent": "3567",
+        "income": "",
+        "Are you over 18?": "Yes",
+        "favorite_color": "Blue"
+    },
+    {
+        "sweepstake_id": "6",
+        "customer_id": "100105",
+        "phone": "",
+        "birth_date": "11/7/1948",
+        "address": "\"12 South Main Lane, San Francisco, CA\"",
+        "total_money_spent": "195",
+        "income": "105000",
+        "Are you over 18?": "Y",
+        "favorite_color": "Teal"
+    },
+    {
+        "sweepstake_id": "7",
+        "customer_id": "100106",
+        "phone": "",
+        "birth_date": "9/4/2001",
+        "address": "\"1 Pastery Lane, Chicago, IL\"",
+        "total_money_spent": "56",
+        "income": "50000",
+        "Are you over 18?": "N",
+        "favorite_color": "Orange"
+    },
+    {
+        "sweepstake_id": "8",
+        "customer_id": "100106",
+        "phone": "",
+        "birth_date": "9/4/2001",
+        "address": "\"1 Pastery Lane, Chicago, IL\"",
+        "total_money_spent": "56",
+        "income": "50000",
+        "Are you over 18?": "N",
+        "favorite_color": "Orange"
+    },
+    {
+        "sweepstake_id": "9",
+        "customer_id": "100107",
+        "phone": "235-357-3464",
+        "birth_date": "1978/20/08",
+        "address": "\"987 Croissant Street, Scranton, Pa\"",
+        "total_money_spent": "2536",
+        "income": "30000",
+        "Are you over 18?": "Yes",
+        "favorite_color": "Yellow"
+    },
+    {
+        "sweepstake_id": "10",
+        "customer_id": "100108",
+        "phone": "906-485-1542",
+        "birth_date": "7/6/2006",
+        "address": "\"701 North Street, Sarasota, FL\"",
+        "total_money_spent": "1009",
+        "income": "65000",
+        "Are you over 18?": "Y",
+        "favorite_color": "Red"
+    },
+    {
+        "sweepstake_id": "11",
+        "customer_id": "100109",
+        "phone": "674-357-9151",
+        "birth_date": "1987/30/05",
+        "address": "\"62810 Julip Lane, Scranton, PA\"",
+        "total_money_spent": "540",
+        "income": "",
+        "Are you over 18?": "Y",
+        "favorite_color": "Pink"
+    },
+    {
+        "sweepstake_id": "12",
+        "customer_id": "100110",
+        "phone": "346/458/3370",
+        "birth_date": "10/15/1934",
+        "address": "\"122 South Street, Charleston, SC\"",
+        "total_money_spent": "36",
+        "income": "45000",
+        "Are you over 18?": "Yes",
+        "favorite_color": "Purple"
+    }
+]
