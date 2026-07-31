@@ -1,0 +1,1284 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0603.1643                               -->
+<workbook original-version='18.1' source-build='2026.2.0 (20262.26.0603.1643)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='PayPal Payments.csv+ (Multiple Connections)' inline='true' name='federated.1lfh71c1q4l50g12vsb8q16cbqlt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='PayPal Payments' name='textscan.1sv4yam06c9oh41drscl80lssb50'>
+            <connection class='textscan' directory='X:/Business - Career - Courses/TechSpace/data-analyst-from-analyst-builder/Tableau for Data Visualization/Section-04_Joins - Relationships and Unions/joining-on-real-data' filename='PayPal Payments.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Currency Conversion' name='excel-direct.0307cvq0ncclr1101931k13x7hqu'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='X:/Business - Career - Courses/TechSpace/data-analyst-from-analyst-builder/Tableau for Data Visualization/Section-04_Joins - Relationships and Unions/joining-on-real-data/Currency Conversion.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Products' name='textscan.0oxy1e00k13zxm1c5nbh91w8iqoq'>
+            <connection class='textscan' directory='X:/Business - Career - Courses/TechSpace/data-analyst-from-analyst-builder/Tableau for Data Visualization/Section-04_Joins - Relationships and Unions/joining-on-real-data' filename='Products.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[PayPal Payments.csv].[product_id (metadata)]' />
+              <expression op='[Products.csv].[id]' />
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[PayPal Payments.csv].[Currency]' />
+                <expression op='[Sheet1].[Currency]' />
+              </expression>
+            </clause>
+            <relation connection='textscan.1sv4yam06c9oh41drscl80lssb50' name='PayPal Payments.csv' table='[PayPal Payments#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='string' name='id' ordinal='0' />
+                <column datatype='datetime' name='Created date (UTC)' ordinal='1' />
+                <column datatype='real' name='Amount' ordinal='2' />
+                <column datatype='real' name='Amount Refunded' ordinal='3' />
+                <column datatype='string' name='Currency' ordinal='4' />
+                <column datatype='boolean' name='Captured' ordinal='5' />
+                <column datatype='real' name='Converted Amount' ordinal='6' />
+                <column datatype='real' name='Converted Amount Refunded' ordinal='7' />
+                <column datatype='string' name='Converted Currency' ordinal='8' />
+                <column datatype='string' name='Description' ordinal='9' />
+                <column datatype='real' name='Fee' ordinal='10' />
+                <column datatype='string' name='Status' ordinal='11' />
+                <column datatype='string' name='Seller Message' ordinal='12' />
+                <column datatype='string' name='Card ID' ordinal='13' />
+                <column datatype='string' name='Customer ID' ordinal='14' />
+                <column datatype='string' name='Invoice ID' ordinal='15' />
+                <column datatype='string' name='Transfer' ordinal='16' />
+                <column datatype='string' name='price_id (metadata)' ordinal='17' />
+                <column datatype='string' name='product_id (metadata)' ordinal='18' />
+              </columns>
+            </relation>
+            <relation connection='excel-direct.0307cvq0ncclr1101931k13x7hqu' name='Sheet1' table='[Sheet1$]' type='table'>
+              <columns gridOrigin='A1:B20:no:A1:B20:0' header='yes' outcome='2'>
+                <column datatype='string' name='Currency' ordinal='0' />
+                <column datatype='real' name='USD Conversion' ordinal='1' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.0oxy1e00k13zxm1c5nbh91w8iqoq' name='Products.csv' table='[Products#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='id' ordinal='0' />
+              <column datatype='string' name='Name' ordinal='1' />
+              <column datatype='datetime' name='Date (UTC)' ordinal='2' />
+              <column datatype='string' name='Tax Code' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Amount Refunded]' value='[PayPal Payments.csv].[Amount Refunded]' />
+          <map key='[Amount]' value='[PayPal Payments.csv].[Amount]' />
+          <map key='[Captured]' value='[PayPal Payments.csv].[Captured]' />
+          <map key='[Card ID]' value='[PayPal Payments.csv].[Card ID]' />
+          <map key='[Converted Amount Refunded]' value='[PayPal Payments.csv].[Converted Amount Refunded]' />
+          <map key='[Converted Amount]' value='[PayPal Payments.csv].[Converted Amount]' />
+          <map key='[Converted Currency]' value='[PayPal Payments.csv].[Converted Currency]' />
+          <map key='[Created date (UTC)]' value='[PayPal Payments.csv].[Created date (UTC)]' />
+          <map key='[Currency (Sheet1)]' value='[Sheet1].[Currency]' />
+          <map key='[Currency]' value='[PayPal Payments.csv].[Currency]' />
+          <map key='[Customer ID]' value='[PayPal Payments.csv].[Customer ID]' />
+          <map key='[Date (UTC)]' value='[Products.csv].[Date (UTC)]' />
+          <map key='[Description]' value='[PayPal Payments.csv].[Description]' />
+          <map key='[Fee]' value='[PayPal Payments.csv].[Fee]' />
+          <map key='[Invoice ID]' value='[PayPal Payments.csv].[Invoice ID]' />
+          <map key='[Name]' value='[Products.csv].[Name]' />
+          <map key='[Seller Message]' value='[PayPal Payments.csv].[Seller Message]' />
+          <map key='[Status]' value='[PayPal Payments.csv].[Status]' />
+          <map key='[Tax Code]' value='[Products.csv].[Tax Code]' />
+          <map key='[Transfer]' value='[PayPal Payments.csv].[Transfer]' />
+          <map key='[USD Conversion]' value='[Sheet1].[USD Conversion]' />
+          <map key='[id (Products.csv)]' value='[Products.csv].[id]' />
+          <map key='[id]' value='[PayPal Payments.csv].[id]' />
+          <map key='[price_id (metadata)]' value='[PayPal Payments.csv].[price_id (metadata)]' />
+          <map key='[product_id (metadata)]' value='[PayPal Payments.csv].[product_id (metadata)]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Created date (UTC)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Created date (UTC)]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Created date (UTC)</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Amount]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Amount</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amount Refunded</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Amount Refunded]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Amount Refunded</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Currency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Currency]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Currency</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Captured</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Captured]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Captured</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Converted Amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Converted Amount]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Converted Amount</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Converted Amount Refunded</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Converted Amount Refunded]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Converted Amount Refunded</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Converted Currency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Converted Currency]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Converted Currency</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fee</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fee]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Fee</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Seller Message</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Seller Message]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Seller Message</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Card ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Card ID]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Card ID</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Invoice ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Invoice ID]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Invoice ID</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transfer</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Transfer]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>Transfer</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_id (metadata)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[price_id (metadata)]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>price_id (metadata)</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id (metadata)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id (metadata)]</local-name>
+            <parent-name>[PayPal Payments.csv]</parent-name>
+            <remote-alias>product_id (metadata)</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Currency</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Currency (Sheet1)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Currency</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USD Conversion</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[USD Conversion]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>USD Conversion</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B20:no:A1:B20:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Products.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id (Products.csv)]</local-name>
+            <parent-name>[Products.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[Products.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date (UTC)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Date (UTC)]</local-name>
+            <parent-name>[Products.csv]</parent-name>
+            <remote-alias>Date (UTC)</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tax Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Tax Code]</local-name>
+            <parent-name>[Products.csv]</parent-name>
+            <remote-alias>Tax Code</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='USD Converted Amount' datatype='real' name='[Calculation_3514617602936832]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if ISNULL([USD Conversion]) THEN [Amount]&#13;&#10;&#13;&#10;else [Amount] * [USD Conversion]&#13;&#10;END' />
+      </column>
+      <column caption='PayPal Payments.csv' datatype='table' name='[__tableau_internal_object_id__].[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]' role='measure' type='quantitative' />
+      <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+      <column caption='Price Id (Metadata)' datatype='string' name='[price_id (metadata)]' role='dimension' type='nominal' />
+      <column caption='Product Id (Metadata)' datatype='string' name='[product_id (metadata)]' role='dimension' type='nominal' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/USER/AppData/Local/Temp/TableauTemp/#TableauTemp_05asakt0y563fo1cdc1kk045tt26.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/30/2026 05:18:25 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[Amount Refunded]' value='[Extract].[Amount Refunded]' />
+            <map key='[Amount]' value='[Extract].[Amount]' />
+            <map key='[Captured]' value='[Extract].[Captured]' />
+            <map key='[Card ID]' value='[Extract].[Card ID]' />
+            <map key='[Converted Amount Refunded]' value='[Extract].[Converted Amount Refunded]' />
+            <map key='[Converted Amount]' value='[Extract].[Converted Amount]' />
+            <map key='[Converted Currency]' value='[Extract].[Converted Currency]' />
+            <map key='[Created date (UTC)]' value='[Extract].[Created date (UTC)]' />
+            <map key='[Currency (Sheet1)]' value='[Extract].[Currency]' />
+            <map key='[Currency]' value='[Extract].[Currency1]' />
+            <map key='[Customer ID]' value='[Extract].[Customer ID]' />
+            <map key='[Date (UTC)]' value='[Extract].[Date (UTC)]' />
+            <map key='[Description]' value='[Extract].[Description]' />
+            <map key='[Fee]' value='[Extract].[Fee]' />
+            <map key='[Invoice ID]' value='[Extract].[Invoice ID]' />
+            <map key='[Name]' value='[Extract].[Name]' />
+            <map key='[Seller Message]' value='[Extract].[Seller Message]' />
+            <map key='[Status]' value='[Extract].[Status]' />
+            <map key='[Tax Code]' value='[Extract].[Tax Code]' />
+            <map key='[Transfer]' value='[Extract].[Transfer]' />
+            <map key='[USD Conversion]' value='[Extract].[USD Conversion]' />
+            <map key='[id (Products.csv)]' value='[Extract].[id]' />
+            <map key='[id]' value='[Extract].[id1]' />
+            <map key='[price_id (metadata)]' value='[Extract].[price_id (metadata)]' />
+            <map key='[product_id (metadata)]' value='[Extract].[product_id (metadata)]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2120</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Created date (UTC)</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Created date (UTC)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Created date (UTC)</remote-alias>
+              <ordinal>1</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1723</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Amount</remote-alias>
+              <ordinal>2</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>352</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Amount Refunded</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Amount Refunded]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Amount Refunded</remote-alias>
+              <ordinal>3</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Currency1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Currency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Currency1</remote-alias>
+              <ordinal>4</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Captured</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Captured]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Captured</remote-alias>
+              <ordinal>5</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Converted Amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Converted Amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Converted Amount</remote-alias>
+              <ordinal>6</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>97</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Converted Amount Refunded</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Converted Amount Refunded]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Converted Amount Refunded</remote-alias>
+              <ordinal>7</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Converted Currency</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Converted Currency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Converted Currency</remote-alias>
+              <ordinal>8</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Description</remote-alias>
+              <ordinal>9</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fee</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Fee]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fee</remote-alias>
+              <ordinal>10</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Status</remote-alias>
+              <ordinal>11</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Seller Message</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Seller Message]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Seller Message</remote-alias>
+              <ordinal>12</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Card ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Card ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Card ID</remote-alias>
+              <ordinal>13</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1775</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>14</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1235</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Invoice ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Invoice ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Invoice ID</remote-alias>
+              <ordinal>15</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1983</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transfer</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Transfer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transfer</remote-alias>
+              <ordinal>16</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_id (metadata)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[price_id (metadata)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_id (metadata)</remote-alias>
+              <ordinal>17</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>product_id (metadata)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[product_id (metadata)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>product_id (metadata)</remote-alias>
+              <ordinal>18</ordinal>
+              <family>PayPal Payments.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Currency</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Currency (Sheet1)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Currency</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>USD Conversion</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[USD Conversion]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>USD Conversion</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[id (Products.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Products.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Products.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date (UTC)</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Date (UTC)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date (UTC)</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Products.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tax Code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Tax Code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tax Code</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Products.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='id' />
+        <field-sort-custom-order field='Created date (UTC)' />
+        <field-sort-custom-order field='Amount' />
+        <field-sort-custom-order field='Calculation_3514617602936832' />
+        <field-sort-custom-order field='Amount Refunded' />
+        <field-sort-custom-order field='Currency' />
+        <field-sort-custom-order field='Captured' />
+        <field-sort-custom-order field='Converted Amount' />
+        <field-sort-custom-order field='Converted Amount Refunded' />
+        <field-sort-custom-order field='Converted Currency' />
+        <field-sort-custom-order field='Description' />
+        <field-sort-custom-order field='Fee' />
+        <field-sort-custom-order field='Status' />
+        <field-sort-custom-order field='Seller Message' />
+        <field-sort-custom-order field='Card ID' />
+        <field-sort-custom-order field='Customer ID' />
+        <field-sort-custom-order field='Invoice ID' />
+        <field-sort-custom-order field='Transfer' />
+        <field-sort-custom-order field='price_id (metadata)' />
+        <field-sort-custom-order field='product_id (metadata)' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='PayPal Payments.csv' id='PayPal Payments.csv_7D193288EA7E43D9809E3C6D58C0026F'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[PayPal Payments.csv].[product_id (metadata)]' />
+                    <expression op='[Products.csv].[id]' />
+                  </expression>
+                </clause>
+                <relation join='left' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[PayPal Payments.csv].[Currency]' />
+                      <expression op='[Sheet1].[Currency]' />
+                    </expression>
+                  </clause>
+                  <relation connection='textscan.1sv4yam06c9oh41drscl80lssb50' name='PayPal Payments.csv' table='[PayPal Payments#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                      <column datatype='string' name='id' ordinal='0' />
+                      <column datatype='datetime' name='Created date (UTC)' ordinal='1' />
+                      <column datatype='real' name='Amount' ordinal='2' />
+                      <column datatype='real' name='Amount Refunded' ordinal='3' />
+                      <column datatype='string' name='Currency' ordinal='4' />
+                      <column datatype='boolean' name='Captured' ordinal='5' />
+                      <column datatype='real' name='Converted Amount' ordinal='6' />
+                      <column datatype='real' name='Converted Amount Refunded' ordinal='7' />
+                      <column datatype='string' name='Converted Currency' ordinal='8' />
+                      <column datatype='string' name='Description' ordinal='9' />
+                      <column datatype='real' name='Fee' ordinal='10' />
+                      <column datatype='string' name='Status' ordinal='11' />
+                      <column datatype='string' name='Seller Message' ordinal='12' />
+                      <column datatype='string' name='Card ID' ordinal='13' />
+                      <column datatype='string' name='Customer ID' ordinal='14' />
+                      <column datatype='string' name='Invoice ID' ordinal='15' />
+                      <column datatype='string' name='Transfer' ordinal='16' />
+                      <column datatype='string' name='price_id (metadata)' ordinal='17' />
+                      <column datatype='string' name='product_id (metadata)' ordinal='18' />
+                    </columns>
+                  </relation>
+                  <relation connection='excel-direct.0307cvq0ncclr1101931k13x7hqu' name='Sheet1' table='[Sheet1$]' type='table'>
+                    <columns gridOrigin='A1:B20:no:A1:B20:0' header='yes' outcome='2'>
+                      <column datatype='string' name='Currency' ordinal='0' />
+                      <column datatype='real' name='USD Conversion' ordinal='1' />
+                    </columns>
+                  </relation>
+                </relation>
+                <relation connection='textscan.0oxy1e00k13zxm1c5nbh91w8iqoq' name='Products.csv' table='[Products#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='string' name='id' ordinal='0' />
+                    <column datatype='string' name='Name' ordinal='1' />
+                    <column datatype='datetime' name='Date (UTC)' ordinal='2' />
+                    <column datatype='string' name='Tax Code' ordinal='3' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='PayPal Payments.csv+ (Multiple Connections)' name='federated.1lfh71c1q4l50g12vsb8q16cbqlt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1lfh71c1q4l50g12vsb8q16cbqlt'>
+            <column datatype='real' name='[Amount]' role='measure' type='quantitative' />
+            <column caption='USD Converted Amount' datatype='real' name='[Calculation_3514617602936832]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if ISNULL([USD Conversion]) THEN [Amount]&#13;&#10;&#13;&#10;else [Amount] * [USD Conversion]&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column datatype='real' name='[USD Conversion]' role='measure' type='quantitative' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3514617602936832]' derivation='Sum' name='[sum:Calculation_3514617602936832:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1lfh71c1q4l50g12vsb8q16cbqlt].[sum:Calculation_3514617602936832:qk]' value='11' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1lfh71c1q4l50g12vsb8q16cbqlt].[none:Name:nk]' value='42' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1lfh71c1q4l50g12vsb8q16cbqlt].[none:Name:nk]</rows>
+        <cols>[federated.1lfh71c1q4l50g12vsb8q16cbqlt].[sum:Calculation_3514617602936832:qk]</cols>
+      </table>
+      <simple-id uuid='{3DB634DB-F5CE-4DC2-9806-DC3ED5B93F27}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1lfh71c1q4l50g12vsb8q16cbqlt].[none:Name:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{214BBC51-4B0E-49F5-8CBD-3DF7A14D834A}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      DypaBJCscL0RAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

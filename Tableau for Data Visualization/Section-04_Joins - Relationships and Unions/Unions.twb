@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0603.1643                               -->
+<workbook original-version='18.1' source-build='2026.2.0 (20262.26.0603.1643)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Animals Table 1' inline='true' name='federated.092dkju0u8fj841aq1jwu0z5gkym' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Animals Table 1' name='textscan.1norshv08w2ty6149b68v1n4bwlk'>
+            <connection class='textscan' directory='X:/Business - Career - Courses/TechSpace/data-analyst-from-analyst-builder/Tableau for Data Visualization/Section-04_Joins - Relationships and Unions' filename='Animals Table 1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation all='true' name='Animals Table 1.csv+' type='union'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Animal' />
+            <column datatype='string' name='Region' />
+            <column datatype='integer' name='Average_Weight' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='textscan.1norshv08w2ty6149b68v1n4bwlk' name='Animals Table 1.csv' table='[Animals Table 1#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Animal' ordinal='0' />
+              <column datatype='string' name='Region' ordinal='1' />
+              <column datatype='integer' name='Average_Weight' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1norshv08w2ty6149b68v1n4bwlk' name='Animals Table 2.csv' table='[Animals Table 2#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Animal' ordinal='0' />
+              <column datatype='string' name='Region' ordinal='1' />
+              <column datatype='integer' name='Average_Weight' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Animals Table 1.csv+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Animal</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Animal]</local-name>
+            <parent-name>[Animals Table 1.csv+]</parent-name>
+            <remote-alias>Animal</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Animals Table 1.csv+]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average_Weight</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Average_Weight]</local-name>
+            <parent-name>[Animals Table 1.csv+]</parent-name>
+            <remote-alias>Average_Weight</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Animals Table 1.csv+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Average Weight' datatype='integer' name='[Average_Weight]' role='measure' type='quantitative' />
+      <column caption='Animals Table 1.csv' datatype='table' name='[__tableau_internal_object_id__].[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/USER/AppData/Local/Temp/TableauTemp/#TableauTemp_1b97std0hl1mvl185p3hn0eabh0e.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/30/2026 05:00:40 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Animal</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Animal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Animal</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Animals Table 1.csv+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Animals Table 1.csv+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average_Weight</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Average_Weight]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average_Weight</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Animals Table 1.csv+</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Table Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Table Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Table Name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Animals Table 1.csv+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Animals Table 1.csv' id='Animals Table 1.csv_5F3C39DCD6B34034A3852FA40494B976'>
+            <properties context=''>
+              <relation all='true' name='Animals Table 1.csv+' type='union'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Animal' />
+                  <column datatype='string' name='Region' />
+                  <column datatype='integer' name='Average_Weight' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='textscan.1norshv08w2ty6149b68v1n4bwlk' name='Animals Table 1.csv' table='[Animals Table 1#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='string' name='Animal' ordinal='0' />
+                    <column datatype='string' name='Region' ordinal='1' />
+                    <column datatype='integer' name='Average_Weight' ordinal='2' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1norshv08w2ty6149b68v1n4bwlk' name='Animals Table 2.csv' table='[Animals Table 2#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='string' name='Animal' ordinal='0' />
+                    <column datatype='string' name='Region' ordinal='1' />
+                    <column datatype='integer' name='Average_Weight' ordinal='2' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Animals Table 1' name='federated.092dkju0u8fj841aq1jwu0z5gkym' />
+          </datasources>
+          <datasource-dependencies datasource='federated.092dkju0u8fj841aq1jwu0z5gkym'>
+            <column datatype='string' name='[Animal]' role='dimension' type='nominal' />
+            <column caption='Average Weight' datatype='integer' name='[Average_Weight]' role='measure' type='quantitative' />
+            <column-instance column='[Animal]' derivation='None' name='[none:Animal:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Average_Weight]' derivation='Sum' name='[sum:Average_Weight:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.092dkju0u8fj841aq1jwu0z5gkym].[sum:Average_Weight:qk]</rows>
+        <cols>[federated.092dkju0u8fj841aq1jwu0z5gkym].[none:Animal:nk]</cols>
+      </table>
+      <simple-id uuid='{8820E35F-8908-46D5-8AC0-BFB7A27F6CFB}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.092dkju0u8fj841aq1jwu0z5gkym].[none:Animal:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1246C5E6-8E9C-4EE4-8D5A-5A5606EA4EE4}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      KJPO5qaU4rgAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
