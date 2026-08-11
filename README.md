@@ -1,6 +1,6 @@
 # Data Analyst Journey: Analyst Builder 📊
 
-Welcome to my repository tracking my progress, projects, and coursework from **Analyst Builder**! I am sharpening my technical skills to transition into a Data Analyst role.
+Welcome to my repository tracking my progress, projects, and coursework from **Analyst Builder**! I am sharpening my technical skills to transition into a Data role.
 
 ## 🚀 About the Course
 [Analyst Builder](https://analystbuilder.com) is a comprehensive, hands-on data analytics training platform created by Alex The Analyst. It focuses on practical applications of core data tools using real-world databases.
