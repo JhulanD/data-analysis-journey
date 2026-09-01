@@ -1,4 +1,4 @@
-# Data Analyst Journey: Analyst Builder 📊
+# Data Analyst Journey📊
 
 Welcome to my repository tracking my progress, projects, and coursework from **Analyst Builder**! I am sharpening my technical skills to transition into a Data role.
 
