@@ -11,8 +11,9 @@ Welcome to my repository tracking my progress, projects, and coursework from **A
 *   **Data Visualization & Analysis:** Excel
 
 ## 📈 Roadmap & Progress
-*   ✅ **Excel for Data Analytics** 📜 *(Certificate Earned)*
-*   ✅ **MySQL for Data Analytics** 📜 *(Certificate Earned)*
+*   ✅ **Excel for Data Analytics** 📜 *(Certificate -> https://www.analystbuilder.com/achievements/verify/26O89L1IBO?r=K7rDxCCz6XlGPMjb0nxpr3Bp6)*
+*   ✅ **MySQL for Data Analytics** 📜 *(Certificate -> https://www.analystbuilder.com/achievements/verify/4JIY7OCV82?r=kTggdEREcT70X8ebwzAUbBcjd)*
+*   ✅ **Tableau for Data Visualization** 📜 *(Certificate -> https://www.analystbuilder.com/achievements/verify/QGRKYU2PBQ?r=1obuc5Cb2IeXiXpC9p4XNy8tb)*
 *   🔄 **Python for Data Analysis** 💻 *(Current Focus)*
 *   ⬜ PostgreSQL & MSSQL Advanced Queries
 *   ⬜ R Programming
