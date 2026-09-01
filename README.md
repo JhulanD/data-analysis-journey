@@ -1,33 +1,42 @@
-# Data Analyst Journey📊
+# 📊 Data Analyst Journey
 
-Welcome to my repository tracking my progress, projects, and coursework from **Analyst Builder**! I am sharpening my technical skills to transition into a Data role.
+Tracking my journey through hands-on learning, projects, and certifications with [Analyst Builder](https://analystbuilder.com).
 
-## 🚀 About the Course
-[Analyst Builder](https://analystbuilder.com) is a comprehensive, hands-on data analytics training platform created by Alex The Analyst. It focuses on practical applications of core data tools using real-world databases.
+## 🛠️ Skills
+**SQL:** MySQL · PostgreSQL · MSSQL  
+**Analysis:** Excel · Python  
+**Visualization:** Tableau  
+**Tools:** Git · GitHub · Jupyter
 
-## 🛠️ Tech Stack & Skills
-*   **Databases:** MySQL (*Practitioner* 🏆), PostgreSQL, MSSQL
-*   **Programming & Libraries:** Python, R
-*   **Data Visualization & Analysis:** Excel
+## 📜 Certifications & Roadmap
 
-## 📈 Roadmap & Progress
-*   ✅ **Excel for Data Analytics** 📜 *(Certificate -> https://www.analystbuilder.com/achievements/verify/26O89L1IBO?r=K7rDxCCz6XlGPMjb0nxpr3Bp6)*
-*   ✅ **MySQL for Data Analytics** 📜 *(Certificate -> https://www.analystbuilder.com/achievements/verify/4JIY7OCV82?r=kTggdEREcT70X8ebwzAUbBcjd)*
-*   ✅ **Tableau for Data Visualization** 📜 *(Certificate -> https://www.analystbuilder.com/achievements/verify/QGRKYU2PBQ?r=1obuc5Cb2IeXiXpC9p4XNy8tb)*
-*   🔄 **Python for Data Analysis** 💻 *(Current Focus)*
-*   ⬜ PostgreSQL & MSSQL Advanced Queries
-*   ⬜ R Programming
+### ✅ Completed
+- **Excel for Data Analytics** — [View Certificate](https://www.analystbuilder.com/achievements/verify/26O89L1IBO?r=K7rDxCCz6XlGPMjb0nxpr3Bp6)
+- **MySQL for Data Analytics** — [View Certificate](https://www.analystbuilder.com/achievements/verify/4JIY7OCV82?r=kTggdEREcT70X8ebwzAUbBcjd)
+- **Tableau for Data Visualization** — [View Certificate](https://www.analystbuilder.com/achievements/verify/QGRKYU2PBQ?r=1obuc5Cb2IeXiXpC9p4XNy8tb)
 
-## 🏆 Achievements & Badges
-*   **MySQL Practitioner:** Successfully reached 1.2k+ points in MySQL challenges.
+### 🔄 Current
+- **Python for Data Analysis** 🐍
 
-## 📁 Repository Structure
-*   `/Excel/` - Spreadsheets, dashboards, and data cleaning exercises.
-*   `/SQL/` - Query scripts, database schemas, and problem-solving solutions.
-*   `/Python/` - Jupyter Notebooks, Pandas scripts, and automation projects.
+### ⬜ Next
+- PostgreSQL & MSSQL Advanced Queries
+- R Programming
 
-## 📬 Connect with Me
-*   **LinkedIn:** https://www.linkedin.com/in/jhulandey/
-*   **Portfolio:** https://mavenshowcase.com/profile/8891c320-b0b1-702a-1083-f077ca7f5b3d
+## 📊 Tableau Portfolio
 
+🔗 [View Tableau Portfolio](https://public.tableau.com/app/profile/jhuland/vizzes)
 
+⭐ [Featured Project — KPI Dashboard](https://public.tableau.com/views/FinalTableuProject-KPIDashboard/KPIDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+## 📁 Repository
+
+```text
+Excel/       → Analysis & exercises
+SQL/         → MySQL · PostgreSQL · MSSQL
+Tableau/     → Dashboards & projects
+Python/      → Learning & data analysis
+````
+## 🔗 Connect
+- **LinkedIn**: https://www.linkedin.com/in/jhulandey/
+- **Tableau Public:** https://public.tableau.com/app/profile/jhuland/vizzes
+- **Portfolio:** https://mavenshowcase.com/profile/8891c320-b0b1-702a-1083-f077ca7f5b3d
